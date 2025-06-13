@@ -34,12 +34,29 @@
       color: white;
       text-shadow: 0 0 5px #ff0000;
     }
+    .destaque-frase {
+      font-size: 5vw;
+      font-weight: bold;
+      background: linear-gradient(90deg, #ff3c3c, #ff8c00, #ff3c3c);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      text-shadow: 0 0 10px #ff0000;
+      animation: brilhar 2s infinite alternate;
+    }
     @keyframes glitch {
       0% { text-shadow: 2px 0 red; }
       25% { text-shadow: -2px 0 cyan; }
       50% { text-shadow: 2px 0 lime; }
       75% { text-shadow: -2px 0 yellow; }
       100% { text-shadow: 2px 0 red; }
+    }
+    @keyframes brilhar {
+      0% {
+        text-shadow: 0 0 10px #ff0000, 0 0 20px #ff3c3c;
+      }
+      100% {
+        text-shadow: 0 0 20px #ff6f00, 0 0 30px #ff3c3c;
+      }
     }
     audio {
       display: none;
@@ -50,7 +67,7 @@
   <h1 class="glitch">🕯️ MENSAGEM 01</h1>
   <p><strong>"O Começo do Ardor"</strong></p>
   <p>Arquivo recuperado: Registro #F011<br>Fonte: Reino Espiritual – Dimensão da Busca</p>
-  <p><em>“Queimo no peito sem parar.<br>Só sossego quando ouço ‘vem’.<br>(Primeira palavra, letra inicial: F)”</em></p>
+  <p class="destaque-frase"><em>“Queimo no peito sem parar.<br>Só sossego quando ouço ‘vem’.<br>(Primeira palavra, letra inicial: F)”</em></p>
   <p>📃 <strong>Esta é a primeira de quatro brasas. Sem ela, a revelação final não acontece.</strong></p>
   <audio autoplay loop>
     <source src="https://soundbible.com/mp3/Static-SoundBible.com-1456954375.mp3" type="audio/mpeg">
